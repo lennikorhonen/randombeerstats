@@ -11,6 +11,6 @@ and displays their style in matplotlib barchart
 - Run with `python main.py`
 
 ## TODO
-- [] Option to choose how many random beer's get's fetched
-- [] Option to change what get's taken to bar chart (hop, yeast, malts, etc.)
+- [ ] Option to choose how many random beer's get's fetched
+- [ ] Option to change what get's taken to bar chart (hop, yeast, malts, etc.)
 
