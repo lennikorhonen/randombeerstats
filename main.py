@@ -5,7 +5,10 @@ import requests
 import collections
 
 
-JSON_URL='https://random-data-api.com/api/beer/random_beer?size=20'
+req_size=input('How many beers to count: ')
+req_key=input('What to use as counted data [style, hop, malts, ibu, alcohol]')
+
+JSON_URL='https://random-data-api.com/api/beer/random_beer?size=%s'% req_size
 
 r=requests.request(method='get', url=JSON_URL)
 data=r.json()
@@ -13,7 +16,7 @@ data=r.json()
 
 style=[]
 for i in data:
-    style.append(i['style'])
+    style.append(i[req_key])
 
 count=collections.Counter(style)
 print(count)
